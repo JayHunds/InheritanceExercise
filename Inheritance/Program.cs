@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlTypes;
 
 namespace Inheritance
 {
@@ -6,34 +7,49 @@ namespace Inheritance
     {
         static void Main(string[] args)
         {
-            // TODO Be sure to follow best practice when creating your classes
+            Bird bird = new Bird
+            {
+                Species = "Parrot",
+                Age = 5,
+                Habitat = "Tropical forests",
+                IsVertebrate = true,
+                FeatherColor = "Green",
+                CanFly = true,
+                Sound = "Squawk",
+                HasBeak = true
+            };
 
-            // Create a class Animal
-            // give this class 4 members that all Animals have in common
+            Console.WriteLine("Bird: ");
+            Console.WriteLine($"Species: {bird.Species}");
+            Console.WriteLine($"Age: {bird.Age}");
+            Console.WriteLine($"Habitat: {bird.Habitat}");
+            Console.WriteLine($"Is Vertebrate: {bird.IsVertebrate}");
+            Console.WriteLine($"Feather Color: {bird.FeatherColor}");
+            Console.WriteLine($"Can Fly: {bird.CanFly}");
+            Console.WriteLine($"Sound: {bird.Sound}");
+            Console.WriteLine($"Has Beak: {bird.HasBeak}");
 
-
-            // Create a class Bird
-            // give this class 4 members that are specific to Bird
-            // Set this class to inherit from your Animal Class
-
-            // Create a class Reptile
-            // give this class 4 members that are specific to Reptile
-            // Set this class to inherit from your Animal Class
-
-
-
-
-            /*Create an object of your Bird class
-             *  give values to your members using the object of your Bird class
-             *  
-             * Creatively display the class member values 
-             */
-
-            /*Create an object of your Reptile class
-             *  give values to your members using the object of your Reptile class
-             *  
-             * Creatively display the class member values 
-             */
+            Reptile reptile = new Reptile
+            {
+                Species = "Snake",
+                Age = 3,
+                Habitat = "Desert",
+                IsVertebrate = true,
+                IsColdBlooded = true,
+                HasScales = true,
+                LaysEggs = true,
+                SkinTexture = "Smooth"
+            };
+            Console.WriteLine("\nReptile:");
+            Console.WriteLine($"Species: {reptile.Species}");
+            Console.WriteLine($"Age: {reptile.Age}");
+            Console.WriteLine($"Habitat: {reptile.Habitat}");
+            Console.WriteLine($"Is Vertebrate: {reptile.IsVertebrate}");
+            Console.WriteLine($"Is Cold Blooded: {reptile.IsColdBlooded}");
+            Console.WriteLine($"Has Scales: {reptile.HasScales}");
+            Console.WriteLine($"Lays Eggs: {reptile.LaysEggs}");
+            Console.WriteLine($"Skin Texture: {reptile.SkinTexture}");
         }
+
     }
 }
